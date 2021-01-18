@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Customer from './components/Customer';
+import CustomerAdd from './components/CustomerAdd';
 import Paper from '@material-ui/core/Paper';
 import Table from '@material-ui/core/Table';
 import TableHead from '@material-ui/core/TableHead';
@@ -70,7 +71,8 @@ class App extends Component {
   render() {
     const { classes } = this.props;
   return (
-    <Paper className={classes.root}>
+    <div>
+<Paper className={classes.root}>
       <Table className={classes.table}>
         <TableHead>
           <TableRow>
@@ -106,6 +108,8 @@ class App extends Component {
         </TableBody>
       </Table>
     </Paper>
+    <CustomerAdd/>
+    </div>
   );
   }
 }
